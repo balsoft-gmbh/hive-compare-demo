@@ -7,3 +7,8 @@ def create_order(customer, lines):
 
 def order_total(order):
     return sum(line_total(line) for line in order["lines"])
+
+
+def set_status(order, status):
+    order["status"] = status
+    return order
