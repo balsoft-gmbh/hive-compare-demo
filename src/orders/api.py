@@ -12,3 +12,8 @@ def order_total(order):
 def set_status(order, status):
     order["status"] = status
     return order
+
+
+def add_note(order, text):
+    order.setdefault("notes", []).append(text)
+    return order
